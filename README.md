@@ -3,20 +3,22 @@ Raspberry Pico W based weather station
 
 ## requirements
 
-Pico-W-Go extension for VSCode
-python3.10
-make
+* python3.10
+* make
+  * or **Pico-W-Go** extension for VSCode. You will need to set `pico` as sync folder in `.vscode/settings.json` after project initiation.
 
-## dev setup
+## deploy
 
-Install and initiate Pico-W-Go extension. Choose `pico` as sync folder.
+Connect Pico via USB and use preferred sync method.
 
-## build
-
+### using make
 ``` bash
 #set AMPY_PORT=COM7         -- example for windows
 #export AMPY_PORT=/dev/tty  -- example for linux
 
 pip install -r requirements.txt
-make put
+make cp
 ```
+
+### using VSCode 
+sync via **Pico-W-Go**
